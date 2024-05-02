@@ -613,7 +613,7 @@ bool fans_check_enabled = true;
 
 void crashdet_stop_and_save_print()
 {
-	stop_and_save_print_to_ram(10, -default_retraction); //XY - no change, Z 10mm up, E -1mm retract
+	stop_and_save_print_to_ram(pause_position[Z_AXIS], -default_retraction); //XY - no change, Pause Z LIFT mm up, E -1mm retract
 }
 
 void crashdet_restore_print_and_continue()
